@@ -1,0 +1,21 @@
+services:
+    api:
+        container_name: perola-negra-store-api
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: wevertontsousa/perola-negra-store-api:latest
+        volumes:
+            - ~/.ssh:/home/app/.ssh:ro
+            - .:/app:cached
+        ports:
+            - 8080:8080
+        networks:
+            - perola-negra-store-api
+        tty: true
+
+networks:
+    perola-negra-store-api:
+        name: perola-negra-store-api
+        driver: bridge
+        external: false
