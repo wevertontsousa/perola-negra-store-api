@@ -1,0 +1,26 @@
+{
+    "name": "Pérola Negra Store - API",
+    "dockerComposeFile": [
+        "../docker-compose.yaml"
+    ],
+    "service": "api",
+    "workspaceFolder": "/app",
+    "portsAttributes": {
+        "8080": {
+            "label": "Spring Boot",
+            "onAutoForward": "silent"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "vscjava.vscode-java-pack",
+                "vscjava.vscode-spring-initializr",
+                "GitHub.vscode-pull-request-github",
+                "EditorConfig.EditorConfig",
+                "humao.rest-client"
+            ]
+        }
+    },
+    "shutdownAction": "stopCompose"
+}
